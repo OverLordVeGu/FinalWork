@@ -19,3 +19,17 @@ string[] FillArray (int size) // Метод заполняющий одноме�
     }
     return array;  
 }
+
+string[] SortArray (string[] array) // Метод сортирующий и заполняющий новый массив с сортированными значениями
+{
+    string[] smallArray = new string [array.Length];    
+    for (int i = 0; i < array.Length; i++)
+    { 
+        if (array[i].Length <= 3)
+        {
+            smallArray[i] = array[i];
+        }
+    }
+    smallArray= smallArray.Where (x => x!=null).ToArray(); // функция удаляющая из отсортированного массива пустые элементы          
+    return smallArray;
+}
