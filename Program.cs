@@ -33,3 +33,9 @@ string[] SortArray (string[] array) // Метод сортирующий и за
     smallArray= smallArray.Where (x => x!=null).ToArray(); // функция удаляющая из отсортированного массива пустые элементы          
     return smallArray;
 }
+
+string[] array1 = FillArray (4); 
+Console.Write ("[" + string.Join (", ", array1) + "]"); // вывод массива 1 на экран
+Console.WriteLine(); // пустая разделительная строка между массивами
+string[] arrary2 = SortArray (array1); 
+Console.Write ("[" + string.Join (", ", arrary2) + "]"); // вывод отсортированного массива 2 на экран
